@@ -25,7 +25,7 @@ function initializeClock(id, endtime) {
 
         if (t.total <= 0) {
             clearInterval(timeinterval);
-            var deadline = new Date(Date.parse(new Date()) + 2 * 24 * 60 * 60 * 999.999); // задаем время отсчета
+            var deadline = new Date(Date.parse(new Date()) + 2 * 24 * 60 * 60 * 999.999); // set countdown time
             initializeClock('countdown', deadline);
         }
 
@@ -39,5 +39,5 @@ function initializeClock(id, endtime) {
     var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = new Date(Date.parse(new Date()) + 2 * 24 * 60 * 60 * 999.999); // задаем время отсчета
+var deadline = new Date(Date.parse(new Date()) + 2 * 24 * 60 * 60 * 999.999); // set countdown time
 initializeClock("countdown", deadline);
